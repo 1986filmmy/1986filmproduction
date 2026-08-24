@@ -30,6 +30,7 @@ img {
 }
 a {
     color: inherit;
+    text-decoration: none;
 }
 /* =====================================================
    GLOBAL
@@ -50,8 +51,58 @@ section {
     font-weight: 300;
     letter-spacing: -2px;
 }
-.muted {
-    color: #888;
+/* =====================================================
+   NAVIGATION
+===================================================== */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    z-index: 9999;
+    transition:
+        background .5s ease,
+        backdrop-filter .5s ease,
+        border-color .5s ease;
+    border-bottom: 1px solid transparent;
+}
+.nav.scrolled {
+    background: rgba(8,8,8,.72);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.logo {
+    font-size: 19px;
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.nav-links a {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #aaa;
+    transition: color .3s ease;
+}
+.nav-links a:hover {
+    color: #fff;
+}
+.nav-menu {
+    display: none;
+    background: none;
+    border: 0;
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 2px;
+    cursor: pointer;
 }
 /* =====================================================
    HERO
@@ -86,7 +137,7 @@ section {
         radial-gradient(
             circle at center,
             transparent 20%,
-            rgba(0,0,0,.5) 100%
+            rgba(0,0,0,.55) 100%
         );
 }
 .hero-content {
@@ -95,7 +146,7 @@ section {
     will-change: transform, opacity;
 }
 .hero-small {
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 6px;
     color: #bbb;
     margin-bottom: 22px;
@@ -108,7 +159,7 @@ section {
 }
 .hero-subtitle {
     margin-top: 35px;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 5px;
     color: #ccc;
 }
@@ -134,7 +185,7 @@ section {
     left: 50%;
     transform: translateX(-50%);
     color: #777;
-    font-size: 10px;
+    font-size: 9px;
     letter-spacing: 4px;
 }
 /* =====================================================
@@ -159,10 +210,11 @@ section {
     height: 680px;
     object-fit: cover;
     transform: scale(1.12);
-    transition: transform 1.4s cubic-bezier(.2,.7,.2,1);
+    transition:
+        transform 1.4s cubic-bezier(.2,.7,.2,1);
     will-change: transform;
 }
-.about-photo-wrap.is-visible .about-photo {
+.about-photo-wrap.visible .about-photo {
     transform: scale(1);
 }
 .about-copy {
@@ -172,7 +224,7 @@ section {
         transform 1s cubic-bezier(.2,.7,.2,1),
         opacity 1s ease;
 }
-.about-copy.is-visible {
+.about-copy.visible {
     transform: translateY(0);
     opacity: 1;
 }
@@ -205,7 +257,7 @@ section {
     line-height: 1.5;
 }
 /* =====================================================
-   ABOUT SECONDARY IMAGES
+   ABOUT IMAGE STRIP
 ===================================================== */
 .about-strip {
     max-width: 1400px;
@@ -263,13 +315,10 @@ section {
     position: absolute;
     top: 60px;
     left: 8%;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 3px;
     color: #666;
 }
-/* =====================================================
-   THREE IMAGE LAYOUT
-===================================================== */
 .work-three {
     width: 100%;
     max-width: 1400px;
@@ -336,12 +385,12 @@ section {
     transform: translateY(0);
 }
 .work-info small {
-    color: #ccc;
+    color: #fff;
     font-size: 10px;
     letter-spacing: 3px;
 }
 /* =====================================================
-   FEATURED FINAL WORK
+   FEATURED WORK
 ===================================================== */
 .work-featured {
     min-height: 100vh;
@@ -377,6 +426,59 @@ section {
     font-weight: 300;
     letter-spacing: -4px;
     mix-blend-mode: difference;
+}
+/* =====================================================
+   CREDITS
+===================================================== */
+.credits {
+    background: #080808;
+    overflow: hidden;
+}
+.credits-inner {
+    max-width: 1400px;
+    margin: auto;
+}
+.credits-intro {
+    max-width: 700px;
+    color: #777;
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+.credit-list {
+    margin-top: 90px;
+    border-top: 1px solid #333;
+}
+.credit-row {
+    display: grid;
+    grid-template-columns: 180px 1fr 180px;
+    align-items: center;
+    gap: 30px;
+    padding: 32px 0;
+    border-bottom: 1px solid #222;
+    transition:
+        padding .5s ease,
+        background .5s ease;
+}
+.credit-row:hover {
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #101010;
+}
+.credit-type {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #666;
+}
+.credit-title {
+    font-size: 25px;
+    font-weight: 300;
+}
+.credit-role {
+    text-align: right;
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 1px;
 }
 /* =====================================================
    SERVICES
@@ -510,7 +612,6 @@ section {
     display: inline-block;
     padding: 16px 35px;
     border: 1px solid #fff;
-    text-decoration: none;
     font-size: 11px;
     letter-spacing: 3px;
     transition: .3s;
@@ -538,6 +639,30 @@ footer {
     section {
         padding: 80px 7%;
     }
+    .nav {
+        height: 65px;
+        padding: 0 7%;
+    }
+    .nav-links {
+        display: none;
+    }
+    .nav-menu {
+        display: block;
+    }
+    .nav.mobile-open .nav-links {
+        display: flex;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        padding: 25px 7%;
+        background: rgba(8,8,8,.95);
+        backdrop-filter: blur(18px);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+        border-bottom: 1px solid #222;
+    }
     .hero {
         min-height: 100svh;
     }
@@ -550,8 +675,8 @@ footer {
         letter-spacing: 4px;
     }
     .hero-subtitle {
-        font-size: 10px;
-        letter-spacing: 3px;
+        font-size: 9px;
+        letter-spacing: 2px;
     }
     .about-grid {
         grid-template-columns: 1fr;
@@ -589,9 +714,6 @@ footer {
     .work-card img {
         height: 500px;
     }
-    .work-card:nth-child(2) {
-        transform: translateY(50px) scale(.96);
-    }
     .work-featured {
         min-height: 80vh;
     }
@@ -601,6 +723,17 @@ footer {
     }
     .featured-title {
         font-size: 70px;
+    }
+    .credit-list {
+        margin-top: 60px;
+    }
+    .credit-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 25px 0;
+    }
+    .credit-role {
+        text-align: left;
     }
     .service-grid {
         grid-template-columns: 1fr;
@@ -625,9 +758,41 @@ footer {
 </head>
 <body>
 <!-- =====================================================
+     NAVIGATION
+===================================================== -->
+<nav class="nav" id="nav">
+    <a href="#top" class="logo">
+        1986
+    </a>
+    <div class="nav-links">
+        <a href="#works">
+            WORK
+        </a>
+        <a href="#about">
+            ABOUT
+        </a>
+        <a href="#credits">
+            CREDITS
+        </a>
+        <a href="#services">
+            SERVICES
+        </a>
+        <a href="#contact">
+            CONTACT
+        </a>
+    </div>
+    <button
+        class="nav-menu"
+        id="navMenu">
+        MENU
+    </button>
+</nav>
+<!-- =====================================================
      HERO
 ===================================================== -->
-<section class="hero">
+<section
+    class="hero"
+    id="top">
     <div
         class="hero-image"
         id="heroImage">
@@ -639,7 +804,9 @@ footer {
         <div class="hero-small">
             MALAYSIA · SOUTHEAST ASIA
         </div>
-        <h1>1986</h1>
+        <h1>
+            1986
+        </h1>
         <div class="hero-subtitle">
             FILM · TELEVISION · COMMERCIAL · SHORT DRAMA
         </div>
@@ -652,7 +819,9 @@ footer {
 <!-- =====================================================
      ABOUT
 ===================================================== -->
-<section class="about" id="about">
+<section
+    class="about"
+    id="about">
     <div class="about-grid">
         <div
             class="about-photo-wrap reveal-scale">
@@ -729,7 +898,9 @@ footer {
 <!-- =====================================================
      SELECTED WORKS
 ===================================================== -->
-<section class="works" id="works">
+<section
+    class="works"
+    id="works">
     <div class="works-header">
         <div class="label">
             SELECTED WORKS
@@ -754,7 +925,9 @@ footer {
                     src="./IMG_20260809_102652.jpeg"
                     alt="Short Drama 01">
                 <div class="work-info">
-                    <small>SHORT DRAMA · 01</small>
+                    <small>
+                        SHORT DRAMA · 01
+                    </small>
                 </div>
             </div>
             <div class="work-card">
@@ -762,7 +935,9 @@ footer {
                     src="./IMG_20260809_102729.jpeg"
                     alt="Short Drama 02">
                 <div class="work-info">
-                    <small>SHORT DRAMA · 02</small>
+                    <small>
+                        SHORT DRAMA · 02
+                    </small>
                 </div>
             </div>
             <div class="work-card">
@@ -770,7 +945,9 @@ footer {
                     src="./IMG_20260809_102845.jpeg"
                     alt="Short Drama 03">
                 <div class="work-info">
-                    <small>SHORT DRAMA · 03</small>
+                    <small>
+                        SHORT DRAMA · 03
+                    </small>
                 </div>
             </div>
         </div>
@@ -786,7 +963,9 @@ footer {
                     src="./IMG_20260809_103003.jpeg"
                     alt="Short Drama 04">
                 <div class="work-info">
-                    <small>SHORT DRAMA · 04</small>
+                    <small>
+                        SHORT DRAMA · 04
+                    </small>
                 </div>
             </div>
             <div class="work-card">
@@ -794,7 +973,9 @@ footer {
                     src="./IMG_20260809_103116.jpeg"
                     alt="Short Drama 05">
                 <div class="work-info">
-                    <small>SHORT DRAMA · 05</small>
+                    <small>
+                        SHORT DRAMA · 05
+                    </small>
                 </div>
             </div>
             <div class="work-card">
@@ -802,7 +983,9 @@ footer {
                     src="./IMG_20260809_103150.jpeg"
                     alt="Short Drama 06">
                 <div class="work-info">
-                    <small>SHORT DRAMA · 06</small>
+                    <small>
+                        SHORT DRAMA · 06
+                    </small>
                 </div>
             </div>
         </div>
@@ -818,7 +1001,9 @@ footer {
                     src="./IMG_20260809_103402.jpeg"
                     alt="Short Drama 07">
                 <div class="work-info">
-                    <small>SHORT DRAMA · 07</small>
+                    <small>
+                        SHORT DRAMA · 07
+                    </small>
                 </div>
             </div>
             <div class="work-card">
@@ -826,7 +1011,9 @@ footer {
                     src="./IMG_20260809_103514.jpeg"
                     alt="Short Drama 08">
                 <div class="work-info">
-                    <small>SHORT DRAMA · 08</small>
+                    <small>
+                        SHORT DRAMA · 08
+                    </small>
                 </div>
             </div>
             <div class="work-card">
@@ -834,13 +1021,16 @@ footer {
                     src="./IMG_20260809_103824.jpeg"
                     alt="Short Drama 09">
                 <div class="work-info">
-                    <small>SHORT DRAMA · 09</small>
+                    <small>
+                        SHORT DRAMA · 09
+                    </small>
                 </div>
             </div>
         </div>
     </div>
     <!-- FEATURED 10 -->
-    <div class="work-featured reveal-scale">
+    <div
+        class="work-featured reveal-scale">
         <img
             src="./IMG_20260809_103855.jpeg"
             class="featured-image"
@@ -851,9 +1041,100 @@ footer {
     </div>
 </section>
 <!-- =====================================================
+     CREDITS
+===================================================== -->
+<section
+    class="credits"
+    id="credits">
+    <div class="credits-inner">
+        <div class="label">
+            SELECTED CREDITS
+        </div>
+        <h2 class="section-title">
+            WORK THAT<br>
+            BUILT THE CRAFT.
+        </h2>
+        <p class="credits-intro">
+            Over two decades of experience across
+            film, television, commercial production
+            and regional projects.
+        </p>
+        <div class="credit-list">
+            <div class="credit-row reveal">
+                <div class="credit-type">
+                    FEATURE FILM
+                </div>
+                <div class="credit-title">
+                    逆战
+                </div>
+                <div class="credit-role">
+                    STUNT
+                </div>
+            </div>
+            <div class="credit-row reveal">
+                <div class="credit-type">
+                    FEATURE FILM
+                </div>
+                <div class="credit-title">
+                    夏日乐悠悠
+                </div>
+                <div class="credit-role">
+                    LIGHTING TECHNICIAN
+                </div>
+            </div>
+            <div class="credit-row reveal">
+                <div class="credit-type">
+                    FEATURE FILM
+                </div>
+                <div class="credit-title">
+                    龙拳
+                </div>
+                <div class="credit-role">
+                    STUNT DOUBLE
+                </div>
+            </div>
+            <div class="credit-row reveal">
+                <div class="credit-type">
+                    FILM PROJECT
+                </div>
+                <div class="credit-title">
+                    Mahathir — The Journey
+                </div>
+                <div class="credit-role">
+                    ASSISTANT PRODUCTION MANAGER
+                </div>
+            </div>
+            <div class="credit-row reveal">
+                <div class="credit-type">
+                    SHORT DRAMA
+                </div>
+                <div class="credit-title">
+                    Regional Short Drama Productions
+                </div>
+                <div class="credit-role">
+                    DIRECTOR
+                </div>
+            </div>
+            <div class="credit-row reveal">
+                <div class="credit-type">
+                    REGIONAL
+                </div>
+                <div class="credit-title">
+                    Malaysia · Indonesia
+                </div>
+                <div class="credit-role">
+                    PRODUCTION
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =====================================================
      SERVICES
 ===================================================== -->
-<section class="services">
+<section
+    class="services"
+    id="services">
     <div class="services-inner">
         <div class="label">
             WHAT WE DO
@@ -972,20 +1253,58 @@ footer {
 </footer>
 <script>
 /* =====================================================
-   INTERSECTION OBSERVER
+   NAVIGATION SCROLL
 ===================================================== */
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
-        });
+const nav =
+    document.getElementById("nav");
+window.addEventListener(
+    "scroll",
+    () => {
+        if (window.scrollY > 60) {
+            nav.classList.add("scrolled");
+        } else {
+            nav.classList.remove("scrolled");
+        }
     },
-    {
-        threshold: 0.15
+    { passive: true }
+);
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+const navMenu =
+    document.getElementById("navMenu");
+navMenu.addEventListener(
+    "click",
+    () => {
+        nav.classList.toggle("mobile-open");
     }
 );
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(link => {
+        link.addEventListener(
+            "click",
+            () => {
+                nav.classList.remove("mobile-open");
+            }
+        );
+    });
+/* =====================================================
+   INTERSECTION OBSERVER
+===================================================== */
+const observer =
+    new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        },
+        {
+            threshold: 0.15
+        }
+    );
 document
     .querySelectorAll(
         ".reveal, .reveal-scale, .work-card, .service, .work-featured, .regional, .contact"
@@ -1024,20 +1343,22 @@ window.addEventListener(
     { passive: true }
 );
 /* =====================================================
-   IMAGE SCROLL MOVEMENT
+   WORK IMAGE MOVEMENT
 ===================================================== */
 const cards =
     document.querySelectorAll(".work-card");
 window.addEventListener(
     "scroll",
     () => {
-        cards.forEach((card, index) => {
+        cards.forEach(card => {
             const rect =
                 card.getBoundingClientRect();
             const center =
                 window.innerHeight / 2;
             const distance =
-                rect.top + rect.height / 2 - center;
+                rect.top +
+                rect.height / 2 -
+                center;
             const movement =
                 distance * -0.035;
             const img =
@@ -1051,13 +1372,30 @@ window.addEventListener(
     { passive: true }
 );
 /* =====================================================
-   MOBILE TOUCH FRIENDLY
+   FEATURED IMAGE PARALLAX
 ===================================================== */
+const featured =
+    document.querySelector(".featured-image");
 window.addEventListener(
-    "load",
+    "scroll",
     () => {
-        document.body.classList.add("loaded");
-    }
+        if (!featured) return;
+        const rect =
+            featured.getBoundingClientRect();
+        const distance =
+            rect.top -
+            window.innerHeight / 2;
+        const movement =
+            distance * -0.04;
+        if (
+            rect.top < window.innerHeight &&
+            rect.bottom > 0
+        ) {
+            featured.style.transform =
+                `translateY(${movement}px) scale(1.02)`;
+        }
+    },
+    { passive: true }
 );
 </script>
 </body>
