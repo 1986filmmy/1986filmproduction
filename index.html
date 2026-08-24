@@ -2,13 +2,17 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>1986 Film Production | Malaysia</title>
 
-<meta name="description"
-content="1986 Film Production — Malaysia-based film, television, commercial and short drama production.">
+<meta
+name="description"
+content="1986 Film Production — Malaysia-based film, television, commercial and short drama production."
+>
 
 <style>
 
@@ -73,7 +77,7 @@ section {
 
 
 /* =========================
-   LANGUAGE FADE
+   LANGUAGE TRANSITION
 ========================= */
 
 body.language-changing {
@@ -87,7 +91,9 @@ body.language-changing {
 ========================= */
 
 .nav {
+
     position: fixed;
+
     top: 0;
     left: 0;
 
@@ -97,6 +103,7 @@ body.language-changing {
     padding: 0 5%;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
@@ -111,20 +118,30 @@ body.language-changing {
 }
 
 .nav.scrolled {
+
     background: rgba(8,8,8,.72);
+
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255,255,255,.08);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
 }
 
 
-/* LOGO */
+/* =========================
+   LOGO
+========================= */
 
 .logo {
+
     display: flex;
+
     align-items: center;
+
     width: 125px;
-    transform: translateY(15px);
-}
+
+    transform:
+        translateY(6px);
 
     transition:
         transform .5s ease,
@@ -132,36 +149,56 @@ body.language-changing {
 }
 
 .logo img {
+
     width: 100%;
+
     height: auto;
+
     object-fit: contain;
 }
 
 .nav.scrolled .logo {
-    transform: scale(.88);
+
+    transform:
+        translateY(6px)
+        scale(.88);
+
     opacity: .92;
 }
 
 
-/* NAV LINKS */
+/* =========================
+   NAV LINKS
+========================= */
 
 .nav-right {
+
     display: flex;
+
     align-items: center;
+
     gap: 32px;
 }
 
 .nav-links {
+
     display: flex;
+
     gap: 32px;
+
     align-items: center;
 }
 
 .nav-links a {
+
     font-size: 10px;
+
     letter-spacing: 2px;
+
     color: #aaa;
-    transition: color .3s ease;
+
+    transition:
+        color .3s ease;
 }
 
 .nav-links a:hover {
@@ -169,19 +206,27 @@ body.language-changing {
 }
 
 
-/* LANGUAGE */
+/* =========================
+   LANGUAGE
+========================= */
 
 .language-switch {
+
     display: flex;
+
     align-items: center;
+
     gap: 9px;
 
     font-size: 10px;
+
     letter-spacing: 1px;
 }
 
 .lang-btn {
+
     border: none;
+
     background: transparent;
 
     color: #555;
@@ -189,13 +234,13 @@ body.language-changing {
     cursor: pointer;
 
     font-size: 10px;
+
     letter-spacing: 1px;
 
     padding: 3px;
 
     transition:
-        color .3s ease,
-        opacity .3s ease;
+        color .3s ease;
 }
 
 .lang-btn:hover {
@@ -211,17 +256,22 @@ body.language-changing {
 }
 
 
-/* MOBILE MENU */
+/* =========================
+   MOBILE MENU
+========================= */
 
 .nav-menu {
+
     display: none;
 
     background: none;
+
     border: 0;
 
     color: #fff;
 
     font-size: 10px;
+
     letter-spacing: 2px;
 
     cursor: pointer;
@@ -233,41 +283,55 @@ body.language-changing {
 ========================= */
 
 .hero {
+
     height: 100vh;
+
     min-height: 700px;
 
     position: relative;
+
     overflow: hidden;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
 }
 
 .hero-image {
+
     position: absolute;
+
     inset: -8%;
 
     background:
+
         linear-gradient(
             rgba(0,0,0,.25),
             rgba(0,0,0,.72)
         ),
+
         url("./IMG_20260809_125423.jpeg")
         center center / cover no-repeat;
 
-    transform: scale(1.08);
+    transform:
+        scale(1.08);
 
-    will-change: transform;
+    will-change:
+        transform;
 }
 
 .hero-overlay {
+
     position: absolute;
+
     inset: 0;
 
     background:
+
         radial-gradient(
             circle at center,
             transparent 20%,
@@ -276,7 +340,9 @@ body.language-changing {
 }
 
 .hero-content {
+
     position: relative;
+
     z-index: 2;
 
     will-change:
@@ -285,37 +351,52 @@ body.language-changing {
 }
 
 .hero-small {
+
     font-size: 11px;
+
     letter-spacing: 6px;
+
     color: #bbb;
+
     margin-bottom: 22px;
 }
 
 .hero h1 {
-    font-size: clamp(80px, 15vw, 190px);
+
+    font-size:
+        clamp(80px,15vw,190px);
+
     font-weight: 300;
+
     letter-spacing: 18px;
+
     line-height: .8;
 }
 
 .hero-subtitle {
+
     margin-top: 35px;
 
     font-size: 13px;
+
     letter-spacing: 5px;
 
     color: #ccc;
 }
 
 .hero-line {
+
     width: 1px;
+
     height: 80px;
 
     background: #777;
 
-    margin: 45px auto 0;
+    margin:
+        45px auto 0;
 
-    transform-origin: top;
+    transform-origin:
+        top;
 
     animation:
         heroLine 2s ease forwards;
@@ -334,12 +415,15 @@ body.language-changing {
 }
 
 .scroll-hint {
+
     position: absolute;
 
     bottom: 35px;
+
     left: 50%;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
     color: #777;
 
@@ -358,6 +442,7 @@ body.language-changing {
 }
 
 .about-grid {
+
     max-width: 1400px;
 
     margin: auto;
@@ -365,8 +450,7 @@ body.language-changing {
     display: grid;
 
     grid-template-columns:
-        1.15fr
-        .85fr;
+        1.15fr .85fr;
 
     gap: 9vw;
 
@@ -374,43 +458,59 @@ body.language-changing {
 }
 
 .about-photo-wrap {
+
     position: relative;
+
     overflow: hidden;
 }
 
 .about-photo {
+
     height: 680px;
 
     object-fit: cover;
 
-    transform: scale(1.12);
+    transform:
+        scale(1.12);
 
     transition:
-        transform 1.4s cubic-bezier(.2,.7,.2,1);
+        transform 1.4s
+        cubic-bezier(.2,.7,.2,1);
 
-    will-change: transform;
+    will-change:
+        transform;
 }
 
-.about-photo-wrap.visible .about-photo {
-    transform: scale(1);
+.about-photo-wrap.visible
+.about-photo {
+
+    transform:
+        scale(1);
 }
 
 .about-copy {
-    transform: translateY(70px);
+
+    transform:
+        translateY(70px);
 
     opacity: 0;
 
     transition:
-        transform 1s cubic-bezier(.2,.7,.2,1),
+        transform 1s
+        cubic-bezier(.2,.7,.2,1),
         opacity 1s ease;
 }
 
 .about-copy.visible {
-    transform: translateY(0);
+
+    transform:
+        translateY(0);
+
     opacity: 1;
 }
 
 .about-copy p {
+
     margin-top: 35px;
 
     max-width: 600px;
@@ -423,6 +523,7 @@ body.language-changing {
 }
 
 .stats {
+
     display: grid;
 
     grid-template-columns:
@@ -434,16 +535,22 @@ body.language-changing {
 }
 
 .stat {
+
     padding-top: 20px;
-    border-top: 1px solid #333;
+
+    border-top:
+        1px solid #333;
 }
 
 .stat-number {
+
     font-size: 38px;
+
     font-weight: 300;
 }
 
 .stat-label {
+
     margin-top: 8px;
 
     color: #666;
@@ -456,37 +563,45 @@ body.language-changing {
 }
 
 .about-strip {
+
     max-width: 1400px;
 
-    margin: 130px auto 0;
+    margin:
+        130px auto 0;
 
     display: grid;
 
     grid-template-columns:
-        1fr
-        1fr;
+        1fr 1fr;
 
     gap: 25px;
 }
 
 .about-strip-item {
+
     height: 440px;
+
     overflow: hidden;
 }
 
 .about-strip-item img {
+
     height: 100%;
 
     object-fit: cover;
 
-    transform: scale(1.15);
+    transform:
+        scale(1.15);
 
     transition:
-        transform 1.5s cubic-bezier(.2,.7,.2,1);
+        transform 1.5s
+        cubic-bezier(.2,.7,.2,1);
 }
 
 .about-strip-item.visible img {
-    transform: scale(1);
+
+    transform:
+        scale(1);
 }
 
 
@@ -495,7 +610,9 @@ body.language-changing {
 ========================= */
 
 .works {
+
     padding-left: 0;
+
     padding-right: 0;
 
     background: #111;
@@ -504,11 +621,15 @@ body.language-changing {
 }
 
 .works-header {
-    padding: 0 8% 90px;
+
+    padding:
+        0 8% 90px;
+
     max-width: 1400px;
 }
 
 .works-intro {
+
     margin-top: 30px;
 
     max-width: 600px;
@@ -521,22 +642,27 @@ body.language-changing {
 }
 
 .work-group {
+
     min-height: 85vh;
 
     display: flex;
+
     align-items: center;
 
     position: relative;
 
-    padding: 80px 8%;
+    padding:
+        80px 8%;
 
     overflow: hidden;
 }
 
 .work-number {
+
     position: absolute;
 
     top: 60px;
+
     left: 8%;
 
     font-size: 11px;
@@ -547,6 +673,7 @@ body.language-changing {
 }
 
 .work-three {
+
     width: 100%;
 
     max-width: 1400px;
@@ -556,9 +683,7 @@ body.language-changing {
     display: grid;
 
     grid-template-columns:
-        .8fr
-        1.2fr
-        .8fr;
+        .8fr 1.2fr .8fr;
 
     gap: 28px;
 
@@ -566,6 +691,7 @@ body.language-changing {
 }
 
 .work-card {
+
     position: relative;
 
     overflow: hidden;
@@ -577,11 +703,13 @@ body.language-changing {
     opacity: 0;
 
     transition:
-        transform 1.2s cubic-bezier(.2,.7,.2,1),
+        transform 1.2s
+        cubic-bezier(.2,.7,.2,1),
         opacity 1s ease;
 }
 
 .work-card.visible {
+
     transform:
         translateY(0)
         scale(1);
@@ -602,18 +730,23 @@ body.language-changing {
 }
 
 .work-card img {
+
     height: 560px;
 
     object-fit: cover;
 
-    transform: scale(1.12);
+    transform:
+        scale(1.12);
 
     transition:
-        transform 1.8s cubic-bezier(.2,.7,.2,1);
+        transform 1.8s
+        cubic-bezier(.2,.7,.2,1);
 }
 
 .work-card.visible img {
-    transform: scale(1);
+
+    transform:
+        scale(1);
 }
 
 .work-card:nth-child(1) {
@@ -625,14 +758,17 @@ body.language-changing {
 }
 
 .work-info {
+
     position: absolute;
 
     left: 25px;
+
     bottom: 25px;
 
     opacity: 0;
 
-    transform: translateY(20px);
+    transform:
+        translateY(20px);
 
     transition:
         opacity .8s ease .6s,
@@ -640,11 +776,15 @@ body.language-changing {
 }
 
 .work-card.visible .work-info {
+
     opacity: 1;
-    transform: translateY(0);
+
+    transform:
+        translateY(0);
 }
 
 .work-info small {
+
     color: #fff;
 
     font-size: 10px;
@@ -658,11 +798,13 @@ body.language-changing {
 ========================= */
 
 .work-featured {
+
     min-height: 100vh;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     position: relative;
@@ -671,9 +813,11 @@ body.language-changing {
 }
 
 .featured-image {
+
     position: absolute;
 
     width: 65%;
+
     height: 80%;
 
     object-fit: cover;
@@ -685,11 +829,14 @@ body.language-changing {
     opacity: 0;
 
     transition:
-        transform 1.6s cubic-bezier(.2,.7,.2,1),
+        transform 1.6s
+        cubic-bezier(.2,.7,.2,1),
         opacity 1.2s ease;
 }
 
-.work-featured.visible .featured-image {
+.work-featured.visible
+.featured-image {
+
     transform:
         scale(1)
         translateY(0);
@@ -698,6 +845,7 @@ body.language-changing {
 }
 
 .featured-title {
+
     position: relative;
 
     z-index: 2;
@@ -718,16 +866,21 @@ body.language-changing {
 ========================= */
 
 .credits {
+
     background: #080808;
+
     overflow: hidden;
 }
 
 .credits-inner {
+
     max-width: 1400px;
+
     margin: auto;
 }
 
 .credits-intro {
+
     max-width: 700px;
 
     color: #777;
@@ -740,25 +893,29 @@ body.language-changing {
 }
 
 .credit-list {
+
     margin-top: 90px;
-    border-top: 1px solid #333;
+
+    border-top:
+        1px solid #333;
 }
 
 .credit-row {
+
     display: grid;
 
     grid-template-columns:
-        180px
-        1fr
-        180px;
+        180px 1fr 180px;
 
     align-items: center;
 
     gap: 30px;
 
-    padding: 32px 0;
+    padding:
+        32px 0;
 
-    border-bottom: 1px solid #222;
+    border-bottom:
+        1px solid #222;
 
     transition:
         padding .5s ease,
@@ -766,13 +923,16 @@ body.language-changing {
 }
 
 .credit-row:hover {
+
     padding-left: 20px;
+
     padding-right: 20px;
 
     background: #101010;
 }
 
 .credit-type {
+
     font-size: 10px;
 
     letter-spacing: 3px;
@@ -781,11 +941,14 @@ body.language-changing {
 }
 
 .credit-title {
+
     font-size: 25px;
+
     font-weight: 300;
 }
 
 .credit-role {
+
     text-align: right;
 
     color: #777;
@@ -801,15 +964,19 @@ body.language-changing {
 ========================= */
 
 .services {
+
     background: #080808;
 }
 
 .services-inner {
+
     max-width: 1400px;
+
     margin: auto;
 }
 
 .service-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -821,27 +988,36 @@ body.language-changing {
 }
 
 .service {
-    padding: 45px 35px;
+
+    padding:
+        45px 35px;
 
     min-height: 280px;
 
-    border-top: 1px solid #333;
+    border-top:
+        1px solid #333;
 
     opacity: 0;
 
-    transform: translateY(50px);
+    transform:
+        translateY(50px);
 
     transition:
         opacity .8s ease,
-        transform .8s cubic-bezier(.2,.7,.2,1);
+        transform .8s
+        cubic-bezier(.2,.7,.2,1);
 }
 
 .service.visible {
+
     opacity: 1;
-    transform: translateY(0);
+
+    transform:
+        translateY(0);
 }
 
 .service-number {
+
     color: #555;
 
     font-size: 11px;
@@ -852,6 +1028,7 @@ body.language-changing {
 }
 
 .service h3 {
+
     font-weight: 400;
 
     letter-spacing: 2px;
@@ -860,6 +1037,7 @@ body.language-changing {
 }
 
 .service p {
+
     color: #777;
 
     margin-top: 18px;
@@ -871,13 +1049,15 @@ body.language-changing {
 
 
 /* =========================
-   REGIONAL
+   GLOBAL PRODUCTION
 ========================= */
 
 .regional {
+
     min-height: 80vh;
 
     display: flex;
+
     align-items: center;
 
     background: #151515;
@@ -886,10 +1066,12 @@ body.language-changing {
 }
 
 .regional-inner {
+
     max-width: 1200px;
 }
 
 .regional h2 {
+
     font-size:
         clamp(55px,9vw,125px);
 
@@ -899,21 +1081,27 @@ body.language-changing {
 
     letter-spacing: -5px;
 
-    transform: translateX(-80px);
+    transform:
+        translateX(-80px);
 
     opacity: 0;
 
     transition:
-        transform 1.2s cubic-bezier(.2,.7,.2,1),
+        transform 1.2s
+        cubic-bezier(.2,.7,.2,1),
         opacity 1s ease;
 }
 
 .regional.visible h2 {
-    transform: translateX(0);
+
+    transform:
+        translateX(0);
+
     opacity: 1;
 }
 
 .regional p {
+
     max-width: 650px;
 
     margin-top: 45px;
@@ -926,7 +1114,8 @@ body.language-changing {
 
     opacity: 0;
 
-    transform: translateY(40px);
+    transform:
+        translateY(40px);
 
     transition:
         opacity 1s ease .25s,
@@ -934,11 +1123,15 @@ body.language-changing {
 }
 
 .regional.visible p {
+
     opacity: 1;
-    transform: translateY(0);
+
+    transform:
+        translateY(0);
 }
 
 .markets {
+
     margin-top: 35px;
 
     color: #666;
@@ -954,32 +1147,41 @@ body.language-changing {
 ========================= */
 
 .contact {
+
     min-height: 75vh;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
 }
 
 .contact-inner {
+
     opacity: 0;
 
-    transform: translateY(50px);
+    transform:
+        translateY(50px);
 
     transition:
         opacity 1s ease,
-        transform 1s cubic-bezier(.2,.7,.2,1);
+        transform 1s
+        cubic-bezier(.2,.7,.2,1);
 }
 
 .contact.visible .contact-inner {
+
     opacity: 1;
-    transform: translateY(0);
+
+    transform:
+        translateY(0);
 }
 
 .contact h2 {
+
     font-size:
         clamp(55px,9vw,120px);
 
@@ -991,12 +1193,15 @@ body.language-changing {
 }
 
 .contact-intro {
+
     color: #777;
 
-    margin: 35px 0 60px;
+    margin:
+        35px 0 60px;
 }
 
 .contact-people {
+
     display: grid;
 
     grid-template-columns:
@@ -1006,11 +1211,13 @@ body.language-changing {
 
     gap: 25px;
 
-    margin-bottom: 55px;
+    margin-bottom: 50px;
 }
 
 .contact-person {
-    border-top: 1px solid #333;
+
+    border-top:
+        1px solid #333;
 
     padding-top: 25px;
 
@@ -1018,6 +1225,7 @@ body.language-changing {
 }
 
 .contact-name {
+
     font-size: 20px;
 
     font-weight: 300;
@@ -1026,6 +1234,7 @@ body.language-changing {
 }
 
 .contact-role {
+
     color: #666;
 
     font-size: 10px;
@@ -1035,27 +1244,98 @@ body.language-changing {
     margin-bottom: 20px;
 }
 
-.whatsapp-button {
-    display: inline-block;
+
+/* =========================
+   CONTACT LINKS
+========================= */
+
+.contact-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 35px;
+
+    flex-wrap: wrap;
+}
+
+.contact-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
 
     font-size: 10px;
 
     letter-spacing: 2px;
 
-    color: #aaa;
+    color: #999;
 
-    border-bottom: 1px solid #555;
+    border-bottom:
+        1px solid #444;
 
-    padding-bottom: 5px;
+    padding-bottom: 7px;
 
     transition:
         color .3s ease,
-        border-color .3s ease;
+        border-color .3s ease,
+        transform .3s ease;
 }
 
-.whatsapp-button:hover {
+.contact-link::after {
+
+    content:
+        "→";
+
+    font-size: 14px;
+
+    transition:
+        transform .3s ease;
+}
+
+.contact-link:hover {
+
     color: #fff;
+
     border-color: #fff;
+
+    transform:
+        translateY(-2px);
+}
+
+.contact-link:hover::after {
+
+    transform:
+        translateX(5px);
+}
+
+
+/* =========================
+   COMPANY EMAIL
+========================= */
+
+.company-email {
+
+    margin-top: 35px;
+
+    text-align: center;
+}
+
+.company-email .contact-role {
+
+    margin-bottom: 15px;
+}
+
+.company-email .contact-link {
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
 }
 
 
@@ -1064,9 +1344,12 @@ body.language-changing {
 ========================= */
 
 footer {
-    padding: 30px 8%;
 
-    border-top: 1px solid #222;
+    padding:
+        30px 8%;
+
+    border-top:
+        1px solid #222;
 
     color: #555;
 
@@ -1087,12 +1370,16 @@ footer {
 @media (max-width: 800px) {
 
     section {
-        padding: 80px 7%;
+        padding:
+            80px 7%;
     }
 
     .nav {
+
         height: 65px;
-        padding: 0 7%;
+
+        padding:
+            0 7%;
     }
 
     .logo {
@@ -1107,7 +1394,8 @@ footer {
         display: block;
     }
 
-    .nav.mobile-open .nav-right {
+    .nav.mobile-open
+    .nav-right {
 
         display: flex;
 
@@ -1119,16 +1407,20 @@ footer {
 
         width: 100%;
 
-        padding: 25px 7%;
+        padding:
+            25px 7%;
 
         background:
             rgba(8,8,8,.95);
 
-        backdrop-filter: blur(18px);
+        backdrop-filter:
+            blur(18px);
 
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        align-items: flex-start;
+        align-items:
+            flex-start;
 
         gap: 22px;
 
@@ -1136,154 +1428,224 @@ footer {
             1px solid #222;
     }
 
-    .nav.mobile-open .nav-links {
+    .nav.mobile-open
+    .nav-links {
+
         display: flex;
 
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        align-items: flex-start;
+        align-items:
+            flex-start;
 
         gap: 22px;
     }
 
-    .nav.mobile-open .language-switch {
+    .nav.mobile-open
+    .language-switch {
+
         display: flex;
     }
 
     .hero {
-        min-height: 100svh;
+
+        min-height:
+            100svh;
     }
 
     .hero h1 {
+
         font-size: 90px;
+
         letter-spacing: 10px;
     }
 
     .hero-small {
+
         font-size: 9px;
+
         letter-spacing: 4px;
     }
 
     .hero-subtitle {
+
         font-size: 9px;
 
         letter-spacing: 2px;
 
         line-height: 1.8;
 
-        padding: 0 20px;
+        padding:
+            0 20px;
     }
 
     .about-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
+
         gap: 50px;
     }
 
     .about-photo {
+
         height: 520px;
     }
 
     .stats {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
     }
 
     .about-strip {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
 
         margin-top: 70px;
     }
 
     .about-strip-item {
+
         height: 350px;
     }
 
     .works-header {
-        padding: 0 7% 60px;
+
+        padding:
+            0 7% 60px;
     }
 
     .work-group {
+
         min-height: auto;
 
-        padding: 70px 7%;
+        padding:
+            70px 7%;
     }
 
     .work-three {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
+
         gap: 20px;
     }
 
     .work-card,
     .work-card:nth-child(1),
     .work-card:nth-child(3) {
+
         margin: 0;
     }
 
     .work-card img {
+
         height: 500px;
     }
 
     .work-featured {
-        min-height: 80vh;
+
+        min-height:
+            80vh;
     }
 
     .featured-image {
+
         width: 85%;
+
         height: 75%;
     }
 
     .featured-title {
+
         font-size: 70px;
     }
 
     .credit-list {
+
         margin-top: 60px;
     }
 
     .credit-row {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
+
         gap: 8px;
-        padding: 25px 0;
+
+        padding:
+            25px 0;
     }
 
     .credit-role {
-        text-align: left;
+
+        text-align:
+            left;
     }
 
     .service-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
+
         margin-top: 50px;
     }
 
     .regional {
-        min-height: 70vh;
+
+        min-height:
+            70vh;
     }
 
     .regional h2 {
+
         font-size: 65px;
+
         letter-spacing: -3px;
     }
 
     .contact h2 {
+
         font-size: 65px;
     }
 
     .contact-people {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
+
         gap: 40px;
     }
 
     .contact-person {
-        text-align: center;
+
+        text-align:
+            center;
+    }
+
+    .contact-links {
+
+        flex-direction:
+            column;
+
+        gap: 25px;
     }
 
     footer {
-        flex-direction: column;
+
+        flex-direction:
+            column;
+
         gap: 10px;
     }
 
 }
 
 </style>
+
 </head>
 
 
@@ -1309,33 +1671,38 @@ footer {
 
         <div class="nav-links">
 
-            <a href="#works"
-               data-en="WORK"
-               data-zh="作品">
+            <a
+                href="#works"
+                data-en="WORK"
+                data-zh="作品">
                 WORK
             </a>
 
-            <a href="#about"
-               data-en="ABOUT"
-               data-zh="关于我们">
+            <a
+                href="#about"
+                data-en="ABOUT"
+                data-zh="关于我们">
                 ABOUT
             </a>
 
-            <a href="#credits"
-               data-en="CREDITS"
-               data-zh="项目经历">
+            <a
+                href="#credits"
+                data-en="CREDITS"
+                data-zh="项目经历">
                 CREDITS
             </a>
 
-            <a href="#services"
-               data-en="SERVICES"
-               data-zh="服务">
+            <a
+                href="#services"
+                data-en="SERVICES"
+                data-zh="服务">
                 SERVICES
             </a>
 
-            <a href="#contact"
-               data-en="CONTACT"
-               data-zh="联系我们">
+            <a
+                href="#contact"
+                data-en="CONTACT"
+                data-zh="联系我们">
                 CONTACT
             </a>
 
@@ -1350,7 +1717,9 @@ footer {
                 EN
             </button>
 
-            <span class="lang-divider">|</span>
+            <span class="lang-divider">
+                |
+            </span>
 
             <button
                 class="lang-btn"
@@ -1397,15 +1766,17 @@ footer {
 
         <div
             class="hero-small"
-            data-en="MALAYSIA · SOUTHEAST ASIA"
-            data-zh="马来西亚 · 东南亚">
+            data-en="MALAYSIA · GLOBAL PRODUCTION"
+            data-zh="马来西亚 · 全球影视制作">
 
-            MALAYSIA · SOUTHEAST ASIA
+            MALAYSIA · GLOBAL PRODUCTION
 
         </div>
 
 
-        <h1>1986</h1>
+        <h1>
+            1986
+        </h1>
 
 
         <div
@@ -1447,7 +1818,8 @@ footer {
     <div class="about-grid">
 
 
-        <div class="about-photo-wrap reveal-scale">
+        <div
+            class="about-photo-wrap reveal-scale">
 
             <img
                 src="./IMG_20260809_111554.jpeg"
@@ -1457,7 +1829,8 @@ footer {
         </div>
 
 
-        <div class="about-copy reveal">
+        <div
+            class="about-copy reveal">
 
             <div
                 class="label"
@@ -1483,7 +1856,7 @@ footer {
 
             <p
                 data-en="1986 Film Production is a Malaysia-based film and video production company with over 20 years of experience across film, television, commercials, short dramas and live productions.<br><br>From concept and pre-production to production and delivery, we work with local and international teams to bring projects to life across Southeast Asia."
-                data-zh="1986 Film Production 是一家立足马来西亚的影视制作公司，拥有超过20年的电影、电视、商业广告、短剧及现场制作经验。<br><br>从创意策划、前期制作到现场拍摄及最终交付，我们与本地及国际团队合作，为进入东南亚市场的项目提供专业制作支持。">
+                data-zh="1986 Film Production 是一家立足马来西亚的影视制作公司，拥有超过20年的电影、电视、商业广告、短剧及现场制作经验。<br><br>从创意策划、前期制作到现场拍摄及最终交付，我们与本地及国际团队合作，为不同地区的影视项目提供专业制作支持。">
 
                 1986 Film Production is a Malaysia-based
                 film and video production company with
@@ -1544,21 +1917,22 @@ footer {
 
                 <div class="stat">
 
-    <div class="stat-number">
-        GLOBAL
-    </div>
+                    <div class="stat-number">
+                        GLOBAL
+                    </div>
 
-    <div
-        class="stat-label"
-        data-en="GLOBAL<br>PRODUCTION"
-        data-zh="全球<br>影视制作">
+                    <div
+                        class="stat-label"
+                        data-en="GLOBAL<br>PRODUCTION"
+                        data-zh="全球<br>影视制作">
 
-        GLOBAL<br>
-        PRODUCTION
+                        GLOBAL<br>
+                        PRODUCTION
 
-    </div>
+                    </div>
 
-</div>
+                </div>
+
 
             </div>
 
@@ -1902,7 +2276,8 @@ footer {
 
 <!-- 10 -->
 
-<div class="work-featured reveal-scale">
+<div
+    class="work-featured reveal-scale">
 
     <img
         src="./IMG_20260809_103855.jpeg"
@@ -2277,7 +2652,7 @@ footer {
 
 
 <!-- =========================
-     REGIONAL
+     GLOBAL PRODUCTION
 ========================= -->
 
 <section
@@ -2288,17 +2663,17 @@ footer {
 
         <div
             class="label"
-            data-en="SOUTHEAST ASIA"
-            data-zh="东南亚">
+            data-en="GLOBAL PRODUCTION"
+            data-zh="全球影视制作">
 
-            SOUTHEAST ASIA
+            GLOBAL PRODUCTION
 
         </div>
 
 
         <h2
             data-en="PRODUCING<br>ACROSS<br>BORDERS."
-            data-zh="跨越地域<br>连接<br>东南亚制作。">
+            data-zh="跨越地域<br>连接<br>全球制作。">
 
             PRODUCING<br>
             ACROSS<br>
@@ -2327,10 +2702,10 @@ footer {
 
         <div
             class="markets"
-            data-en="MALAYSIA · INDONESIA · SOUTHEAST ASIA"
-            data-zh="马来西亚 · 印度尼西亚 · 东南亚">
+            data-en="MALAYSIA · INDONESIA · SOUTHEAST ASIA · GLOBAL"
+            data-zh="马来西亚 · 印度尼西亚 · 东南亚 · 全球">
 
-            MALAYSIA · INDONESIA · SOUTHEAST ASIA
+            MALAYSIA · INDONESIA · SOUTHEAST ASIA · GLOBAL
 
         </div>
 
@@ -2404,7 +2779,7 @@ footer {
 
                 <a
                     href="https://wa.me/60102865276?text=Hi%20Betty%2C%20I%20would%20like%20to%20enquire%20about%20a%20production%20project."
-                    class="whatsapp-button"
+                    class="contact-link"
                     target="_blank"
                     rel="noopener">
 
@@ -2436,7 +2811,7 @@ footer {
 
                 <a
                     href="https://wa.me/60102217431?text=Hi%20Jack%2C%20I%20would%20like%20to%20enquire%20about%20a%20production%20project."
-                    class="whatsapp-button"
+                    class="contact-link"
                     target="_blank"
                     rel="noopener">
 
@@ -2448,6 +2823,33 @@ footer {
 
 
         </div>
+
+
+
+        <!-- COMPANY EMAIL -->
+
+        <div class="company-email">
+
+            <div
+                class="contact-role"
+                data-en="COMPANY EMAIL"
+                data-zh="公司邮箱">
+
+                COMPANY EMAIL
+
+            </div>
+
+
+            <a
+                href="mailto:1986filmmy@gmail.com"
+                class="contact-link">
+
+                1986filmmy@gmail.com
+
+            </a>
+
+        </div>
+
 
     </div>
 
@@ -2469,11 +2871,12 @@ footer {
 
     </span>
 
-    <span
-        data-en="MALAYSIA · SOUTHEAST ASIA"
-        data-zh="马来西亚 · 东南亚">
 
-        MALAYSIA · SOUTHEAST ASIA
+    <span
+        data-en="MALAYSIA · GLOBAL PRODUCTION"
+        data-zh="马来西亚 · 全球影视制作">
+
+        MALAYSIA · GLOBAL PRODUCTION
 
     </span>
 
@@ -2483,6 +2886,7 @@ footer {
 
 <script>
 
+
 /* =========================
    LANGUAGE SWITCH
 ========================= */
@@ -2491,6 +2895,7 @@ const languageButtons =
     document.querySelectorAll(
         ".lang-btn"
     );
+
 
 let currentLanguage =
     localStorage.getItem(
@@ -2506,6 +2911,7 @@ function setLanguage(language) {
 
 
     setTimeout(() => {
+
 
         document
             .querySelectorAll(
@@ -2587,7 +2993,9 @@ setLanguage(currentLanguage);
 ========================= */
 
 const nav =
-    document.getElementById("nav");
+    document.getElementById(
+        "nav"
+    );
 
 
 window.addEventListener(
@@ -2596,16 +3004,22 @@ window.addEventListener(
 
         if (window.scrollY > 60) {
 
-            nav.classList.add("scrolled");
+            nav.classList.add(
+                "scrolled"
+            );
 
         } else {
 
-            nav.classList.remove("scrolled");
+            nav.classList.remove(
+                "scrolled"
+            );
 
         }
 
     },
-    { passive: true }
+    {
+        passive: true
+    }
 );
 
 
@@ -2615,7 +3029,9 @@ window.addEventListener(
 ========================= */
 
 const navMenu =
-    document.getElementById("navMenu");
+    document.getElementById(
+        "navMenu"
+    );
 
 
 navMenu.addEventListener(
@@ -2631,7 +3047,9 @@ navMenu.addEventListener(
 
 
 document
-    .querySelectorAll(".nav-links a")
+    .querySelectorAll(
+        ".nav-links a"
+    )
     .forEach(link => {
 
         link.addEventListener(
@@ -2660,7 +3078,9 @@ const observer =
 
             entries.forEach(entry => {
 
-                if (entry.isIntersecting) {
+                if (
+                    entry.isIntersecting
+                ) {
 
                     entry.target.classList.add(
                         "visible"
@@ -2685,7 +3105,9 @@ document
     )
     .forEach(element => {
 
-        observer.observe(element);
+        observer.observe(
+            element
+        );
 
     });
 
@@ -2722,6 +3144,7 @@ window.addEventListener(
             const move =
                 scroll * .22;
 
+
             const scale =
                 1.08 +
                 scroll * .00008;
@@ -2744,7 +3167,9 @@ window.addEventListener(
         }
 
     },
-    { passive: true }
+    {
+        passive: true
+    }
 );
 
 
@@ -2799,7 +3224,9 @@ window.addEventListener(
         });
 
     },
-    { passive: true }
+    {
+        passive: true
+    }
 );
 
 
@@ -2846,10 +3273,15 @@ window.addEventListener(
         }
 
     },
-    { passive: true }
+    {
+        passive: true
+    }
 );
+
 
 </script>
 
+
 </body>
+
 </html>
