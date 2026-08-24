@@ -1,408 +1,869 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1986 Film Production | Malaysia</title>
-    <meta
-        name="description"
-        content="1986 Film Production — Malaysia-based film, television, commercial and short drama production company."
-    >
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0a0a0a;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-        img {
-            display: block;
-            width: 100%;
-        }
-        section {
-            padding: 100px 8%;
-        }
-        /* =========================
-           HERO
-        ========================= */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background:
-                linear-gradient(
-                    rgba(0,0,0,.40),
-                    rgba(0,0,0,.80)
-                ),
-                url("./IMG_20260809_125423.jpeg")
-                center center / cover no-repeat;
-        }
-        .hero-content {
-            max-width: 1000px;
-        }
-        .hero h1 {
-            font-size: clamp(60px, 10vw, 120px);
-            letter-spacing: 12px;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-        .hero p {
-            font-size: 18px;
-            letter-spacing: 5px;
-            color: #ddd;
-            margin-bottom: 40px;
-        }
-        .button {
-            display: inline-block;
-            padding: 15px 32px;
-            border: 1px solid #ffffff;
-            color: #ffffff;
-            text-decoration: none;
-            letter-spacing: 2px;
-            font-size: 13px;
-            transition: .3s;
-        }
-        .button:hover {
-            background: #ffffff;
-            color: #000000;
-        }
-        /* =========================
-           SECTION TITLES
-        ========================= */
-        .section-label {
-            font-size: 12px;
-            letter-spacing: 4px;
-            color: #777;
-            margin-bottom: 15px;
-        }
-        .section-title {
-            font-size: clamp(32px, 5vw, 55px);
-            font-weight: 400;
-            letter-spacing: 3px;
-            margin-bottom: 30px;
-        }
-        .section-text {
-            max-width: 700px;
-            color: #aaa;
-            font-size: 17px;
-            line-height: 1.9;
-        }
-        /* =========================
-           ABOUT
-        ========================= */
-        .about {
-            background: #0a0a0a;
-        }
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 70px;
-            align-items: center;
-        }
-        .about-main-image {
-            height: 600px;
-            object-fit: cover;
-        }
-        .about-content {
-            padding-right: 5%;
-        }
-        .about-content .section-text {
-            margin-bottom: 40px;
-        }
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-        .stat {
-            border-top: 1px solid #333;
-            padding-top: 20px;
-        }
-        .stat h3 {
-            font-size: 36px;
-            font-weight: 400;
-            margin-bottom: 5px;
-        }
-        .stat p {
-            color: #777;
-            font-size: 12px;
-            line-height: 1.5;
-        }
-        /* =========================
-           ABOUT IMAGE GALLERY
-        ========================= */
-        .about-gallery {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 70px;
-        }
-        .about-gallery img {
-            height: 300px;
-            object-fit: cover;
-        }
-        .about-gallery img:first-child {
-            height: 400px;
-        }
-        /* =========================
-           SERVICES
-        ========================= */
-        .services-section {
-            background: #111111;
-        }
-        .services {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-top: 60px;
-        }
-        .service {
-            border: 1px solid #2c2c2c;
-            padding: 45px 35px;
-            min-height: 240px;
-            transition: .3s;
-        }
-        .service:hover {
-            border-color: #777;
-            transform: translateY(-5px);
-        }
-        .service-number {
-            color: #555;
-            font-size: 13px;
-            margin-bottom: 30px;
-        }
-        .service h3 {
-            font-size: 20px;
-            font-weight: 400;
-            letter-spacing: 2px;
-            margin-bottom: 18px;
-        }
-        .service p {
-            color: #888;
-            font-size: 15px;
-            line-height: 1.8;
-        }
-        /* =========================
-           REGIONAL
-        ========================= */
-        .regional {
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-            background: #161616;
-        }
-        .regional-content {
-            max-width: 850px;
-        }
-        .regional h2 {
-            font-size: clamp(40px, 6vw, 70px);
-            font-weight: 300;
-            letter-spacing: 3px;
-            margin-bottom: 25px;
-        }
-        .regional p {
-            color: #999;
-            font-size: 18px;
-            line-height: 1.9;
-        }
-        .regional-markets {
-            margin-top: 35px;
-            font-size: 12px;
-            letter-spacing: 4px;
-            color: #777;
-        }
-        /* =========================
-           CONTACT
-        ========================= */
-        .contact {
-            text-align: center;
-            padding-top: 130px;
-            padding-bottom: 130px;
-        }
-        .contact h2 {
-            font-size: clamp(38px, 6vw, 70px);
-            font-weight: 300;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-        }
-        .contact p {
-            color: #888;
-            margin-bottom: 35px;
-        }
-        /* =========================
-           FOOTER
-        ========================= */
-        footer {
-            padding: 30px 8%;
-            border-top: 1px solid #222;
-            color: #555;
-            font-size: 12px;
-            display: flex;
-            justify-content: space-between;
-        }
-        /* =========================
-           MOBILE
-        ========================= */
-        @media (max-width: 800px) {
-            section {
-                padding: 75px 7%;
-            }
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 45px;
-            }
-            .about-main-image {
-                height: 450px;
-            }
-            .about-content {
-                padding-right: 0;
-            }
-            .stats {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-            .about-gallery {
-                grid-template-columns: 1fr;
-                gap: 15px;
-                margin-top: 45px;
-            }
-            .about-gallery img,
-            .about-gallery img:first-child {
-                height: 300px;
-            }
-            .services {
-                grid-template-columns: 1fr;
-                margin-top: 40px;
-            }
-            .hero h1 {
-                letter-spacing: 8px;
-            }
-            .hero p {
-                font-size: 13px;
-                letter-spacing: 3px;
-            }
-            footer {
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1986 Film Production | Malaysia</title>
+<meta name="description"
+content="1986 Film Production — Malaysia-based film, television, commercial and short drama production.">
+<style>
+/* =====================================================
+   RESET
+===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #080808;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+img {
+    display: block;
+    width: 100%;
+}
+a {
+    color: inherit;
+}
+/* =====================================================
+   GLOBAL
+===================================================== */
+section {
+    position: relative;
+    padding: 120px 8%;
+}
+.label {
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+.section-title {
+    font-size: clamp(42px, 6vw, 82px);
+    line-height: .95;
+    font-weight: 300;
+    letter-spacing: -2px;
+}
+.muted {
+    color: #888;
+}
+/* =====================================================
+   HERO
+===================================================== */
+.hero {
+    height: 100vh;
+    min-height: 700px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero-image {
+    position: absolute;
+    inset: -8%;
+    background:
+        linear-gradient(
+            rgba(0,0,0,.25),
+            rgba(0,0,0,.72)
+        ),
+        url("./IMG_20260809_125423.jpeg")
+        center center / cover no-repeat;
+    transform: scale(1.08);
+    will-change: transform;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 20%,
+            rgba(0,0,0,.5) 100%
+        );
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    will-change: transform, opacity;
+}
+.hero-small {
+    font-size: 12px;
+    letter-spacing: 6px;
+    color: #bbb;
+    margin-bottom: 22px;
+}
+.hero h1 {
+    font-size: clamp(80px, 15vw, 190px);
+    font-weight: 300;
+    letter-spacing: 18px;
+    line-height: .8;
+}
+.hero-subtitle {
+    margin-top: 35px;
+    font-size: 14px;
+    letter-spacing: 5px;
+    color: #ccc;
+}
+.hero-line {
+    width: 1px;
+    height: 80px;
+    background: #777;
+    margin: 45px auto 0;
+    transform-origin: top;
+    animation: heroLine 2s ease forwards;
+}
+@keyframes heroLine {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+.scroll-hint {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+/* =====================================================
+   ABOUT
+===================================================== */
+.about {
+    background: #080808;
+}
+.about-grid {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 9vw;
+    align-items: center;
+}
+.about-photo-wrap {
+    position: relative;
+    overflow: hidden;
+}
+.about-photo {
+    height: 680px;
+    object-fit: cover;
+    transform: scale(1.12);
+    transition: transform 1.4s cubic-bezier(.2,.7,.2,1);
+    will-change: transform;
+}
+.about-photo-wrap.is-visible .about-photo {
+    transform: scale(1);
+}
+.about-copy {
+    transform: translateY(70px);
+    opacity: 0;
+    transition:
+        transform 1s cubic-bezier(.2,.7,.2,1),
+        opacity 1s ease;
+}
+.about-copy.is-visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+.about-copy p {
+    margin-top: 35px;
+    max-width: 600px;
+    color: #999;
+    font-size: 17px;
+    line-height: 1.9;
+}
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    margin-top: 55px;
+}
+.stat {
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+.stat-number {
+    font-size: 38px;
+    font-weight: 300;
+}
+.stat-label {
+    margin-top: 8px;
+    color: #666;
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+/* =====================================================
+   ABOUT SECONDARY IMAGES
+===================================================== */
+.about-strip {
+    max-width: 1400px;
+    margin: 130px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+.about-strip-item {
+    overflow: hidden;
+    height: 440px;
+}
+.about-strip-item img {
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.15);
+    transition:
+        transform 1.5s cubic-bezier(.2,.7,.2,1);
+}
+.about-strip-item.visible img {
+    transform: scale(1);
+}
+/* =====================================================
+   SELECTED WORKS
+===================================================== */
+.works {
+    padding-left: 0;
+    padding-right: 0;
+    background: #111;
+    overflow: hidden;
+}
+.works-header {
+    padding: 0 8% 90px;
+    max-width: 1400px;
+}
+.works-intro {
+    margin-top: 30px;
+    max-width: 600px;
+    color: #777;
+    font-size: 16px;
+    line-height: 1.8;
+}
+/* =====================================================
+   WORK GROUP
+===================================================== */
+.work-group {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 80px 8%;
+    overflow: hidden;
+}
+.work-number {
+    position: absolute;
+    top: 60px;
+    left: 8%;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #666;
+}
+/* =====================================================
+   THREE IMAGE LAYOUT
+===================================================== */
+.work-three {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: .8fr 1.2fr .8fr;
+    gap: 28px;
+    align-items: center;
+}
+.work-card {
+    position: relative;
+    overflow: hidden;
+    transform:
+        translateY(90px)
+        scale(.94);
+    opacity: 0;
+    transition:
+        transform 1.2s cubic-bezier(.2,.7,.2,1),
+        opacity 1s ease;
+}
+.work-card.visible {
+    transform:
+        translateY(0)
+        scale(1);
+    opacity: 1;
+}
+.work-card:nth-child(1) {
+    transition-delay: .05s;
+}
+.work-card:nth-child(2) {
+    transition-delay: .18s;
+}
+.work-card:nth-child(3) {
+    transition-delay: .3s;
+}
+.work-card img {
+    height: 560px;
+    object-fit: cover;
+    transform: scale(1.12);
+    transition:
+        transform 1.8s cubic-bezier(.2,.7,.2,1);
+}
+.work-card.visible img {
+    transform: scale(1);
+}
+.work-card:nth-child(1) {
+    margin-top: 100px;
+}
+.work-card:nth-child(3) {
+    margin-top: -100px;
+}
+.work-info {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity .8s ease .6s,
+        transform .8s ease .6s;
+}
+.work-card.visible .work-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+.work-info small {
+    color: #ccc;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+/* =====================================================
+   FEATURED FINAL WORK
+===================================================== */
+.work-featured {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.featured-image {
+    position: absolute;
+    width: 65%;
+    height: 80%;
+    object-fit: cover;
+    transform:
+        scale(1.18)
+        translateY(50px);
+    opacity: 0;
+    transition:
+        transform 1.6s cubic-bezier(.2,.7,.2,1),
+        opacity 1.2s ease;
+}
+.work-featured.visible .featured-image {
+    transform:
+        scale(1)
+        translateY(0);
+    opacity: 1;
+}
+.featured-title {
+    position: relative;
+    z-index: 2;
+    font-size: clamp(50px, 9vw, 130px);
+    font-weight: 300;
+    letter-spacing: -4px;
+    mix-blend-mode: difference;
+}
+/* =====================================================
+   SERVICES
+===================================================== */
+.services {
+    background: #080808;
+}
+.services-inner {
+    max-width: 1400px;
+    margin: auto;
+}
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    margin-top: 80px;
+}
+.service {
+    padding: 45px 35px;
+    min-height: 280px;
+    border-top: 1px solid #333;
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.7,.2,1);
+}
+.service.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.service-number {
+    color: #555;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+.service h3 {
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 19px;
+}
+.service p {
+    color: #777;
+    margin-top: 18px;
+    line-height: 1.8;
+    font-size: 14px;
+}
+/* =====================================================
+   REGIONAL
+===================================================== */
+.regional {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: #151515;
+    overflow: hidden;
+}
+.regional-inner {
+    max-width: 1200px;
+}
+.regional h2 {
+    font-size: clamp(55px, 9vw, 125px);
+    line-height: .9;
+    font-weight: 300;
+    letter-spacing: -5px;
+    transform: translateX(-80px);
+    opacity: 0;
+    transition:
+        transform 1.2s cubic-bezier(.2,.7,.2,1),
+        opacity 1s ease;
+}
+.regional.visible h2 {
+    transform: translateX(0);
+    opacity: 1;
+}
+.regional p {
+    max-width: 650px;
+    margin-top: 45px;
+    color: #888;
+    font-size: 17px;
+    line-height: 1.9;
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 1s ease .25s,
+        transform 1s ease .25s;
+}
+.regional.visible p {
+    opacity: 1;
+    transform: translateY(0);
+}
+.markets {
+    margin-top: 35px;
+    color: #666;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+/* =====================================================
+   CONTACT
+===================================================== */
+.contact {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.contact-inner {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(.2,.7,.2,1);
+}
+.contact.visible .contact-inner {
+    opacity: 1;
+    transform: translateY(0);
+}
+.contact h2 {
+    font-size: clamp(55px, 9vw, 120px);
+    font-weight: 300;
+    line-height: .9;
+    letter-spacing: -5px;
+}
+.contact p {
+    color: #777;
+    margin: 35px 0;
+}
+.contact-button {
+    display: inline-block;
+    padding: 16px 35px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 3px;
+    transition: .3s;
+}
+.contact-button:hover {
+    background: #fff;
+    color: #000;
+}
+/* =====================================================
+   FOOTER
+===================================================== */
+footer {
+    padding: 30px 8%;
+    border-top: 1px solid #222;
+    color: #555;
+    font-size: 10px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+}
+/* =====================================================
+   MOBILE
+===================================================== */
+@media (max-width: 800px) {
+    section {
+        padding: 80px 7%;
+    }
+    .hero {
+        min-height: 100svh;
+    }
+    .hero h1 {
+        font-size: 90px;
+        letter-spacing: 10px;
+    }
+    .hero-small {
+        font-size: 9px;
+        letter-spacing: 4px;
+    }
+    .hero-subtitle {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .about-photo {
+        height: 520px;
+    }
+    .stats {
+        grid-template-columns: 1fr;
+    }
+    .about-strip {
+        grid-template-columns: 1fr;
+        margin-top: 70px;
+    }
+    .about-strip-item {
+        height: 350px;
+    }
+    .works-header {
+        padding: 0 7% 60px;
+    }
+    .work-group {
+        min-height: auto;
+        padding: 70px 7%;
+    }
+    .work-three {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .work-card,
+    .work-card:nth-child(1),
+    .work-card:nth-child(3) {
+        margin: 0;
+    }
+    .work-card img {
+        height: 500px;
+    }
+    .work-card:nth-child(2) {
+        transform: translateY(50px) scale(.96);
+    }
+    .work-featured {
+        min-height: 80vh;
+    }
+    .featured-image {
+        width: 85%;
+        height: 75%;
+    }
+    .featured-title {
+        font-size: 70px;
+    }
+    .service-grid {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+    }
+    .regional {
+        min-height: 70vh;
+    }
+    .regional h2 {
+        font-size: 65px;
+        letter-spacing: -3px;
+    }
+    .contact h2 {
+        font-size: 65px;
+    }
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+</style>
 </head>
 <body>
-    <!-- =========================
-         HERO
-    ========================= -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>1986</h1>
+<!-- =====================================================
+     HERO
+===================================================== -->
+<section class="hero">
+    <div
+        class="hero-image"
+        id="heroImage">
+    </div>
+    <div class="hero-overlay"></div>
+    <div
+        class="hero-content"
+        id="heroContent">
+        <div class="hero-small">
+            MALAYSIA · SOUTHEAST ASIA
+        </div>
+        <h1>1986</h1>
+        <div class="hero-subtitle">
+            FILM · TELEVISION · COMMERCIAL · SHORT DRAMA
+        </div>
+        <div class="hero-line"></div>
+    </div>
+    <div class="scroll-hint">
+        SCROLL TO EXPLORE
+    </div>
+</section>
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+<section class="about" id="about">
+    <div class="about-grid">
+        <div
+            class="about-photo-wrap reveal-scale">
+            <img
+                src="./IMG_20260809_111554.jpeg"
+                class="about-photo"
+                alt="1986 Film Production">
+        </div>
+        <div class="about-copy reveal">
+            <div class="label">
+                ABOUT 1986
+            </div>
+            <h2 class="section-title">
+                STORIES<br>
+                MADE<br>
+                ON SET.
+            </h2>
             <p>
-                FILM PRODUCTION · MALAYSIA
+                1986 Film Production is a Malaysia-based
+                film and video production company with
+                over 20 years of experience across film,
+                television, commercials, short dramas
+                and live productions.
+                <br><br>
+                From concept and pre-production to
+                production and delivery, we work with
+                local and international teams to bring
+                projects to life across Southeast Asia.
             </p>
-            <a
-                href="#about"
-                class="button"
-            >
-                EXPLORE 1986
-            </a>
-        </div>
-    </section>
-    <!-- =========================
-         ABOUT
-    ========================= -->
-    <section
-        class="about"
-        id="about"
-    >
-        <div class="about-grid">
-            <div>
-                <img
-                    src="./IMG_20260809_111554.jpeg"
-                    alt="1986 Film Production"
-                    class="about-main-image"
-                >
-            </div>
-            <div class="about-content">
-                <div class="section-label">
-                    ABOUT US
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">
+                        20+
+                    </div>
+                    <div class="stat-label">
+                        YEARS OF<br>
+                        EXPERIENCE
+                    </div>
                 </div>
-                <h2 class="section-title">
-                    STORIES MADE<br>
-                    ON SET.
-                </h2>
-                <p class="section-text">
-                    1986 Film Production is a Malaysia-based
-                    film and video production company with
-                    over 20 years of experience across film,
-                    television, commercials, short dramas
-                    and live productions.
-                    <br><br>
-                    From concept and pre-production to
-                    production and delivery, we work with
-                    local and international teams to bring
-                    projects to life across Southeast Asia.
-                </p>
-                <div class="stats">
-                    <div class="stat">
-                        <h3>20+</h3>
-                        <p>
-                            YEARS OF<br>
-                            EXPERIENCE
-                        </p>
+                <div class="stat">
+                    <div class="stat-number">
+                        10+
                     </div>
-                    <div class="stat">
-                        <h3>10+</h3>
-                        <p>
-                            SHORT DRAMAS<br>
-                            DIRECTED
-                        </p>
+                    <div class="stat-label">
+                        SHORT DRAMAS<br>
+                        DIRECTED
                     </div>
-                    <div class="stat">
-                        <h3>2</h3>
-                        <p>
-                            REGIONAL<br>
-                            MARKETS
-                        </p>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">
+                        2
+                    </div>
+                    <div class="stat-label">
+                        REGIONAL<br>
+                        MARKETS
                     </div>
                 </div>
             </div>
         </div>
-        <div class="about-gallery">
+    </div>
+    <div class="about-strip">
+        <div class="about-strip-item reveal-scale">
             <img
                 src="./IMG_20260809_111454.jpeg"
-                alt="1986 Film Production Behind the Scenes"
-            >
+                alt="1986 Production">
+        </div>
+        <div class="about-strip-item reveal-scale">
             <img
                 src="./IMG_20260809_104043.jpeg"
-                alt="1986 Film Production Crew"
-            >
+                alt="1986 Film Crew">
         </div>
-    </section>
-    <!-- =========================
-         SERVICES
-    ========================= -->
-    <section
-        class="services-section"
-        id="work"
-    >
-        <div class="section-label">
+    </div>
+</section>
+<!-- =====================================================
+     SELECTED WORKS
+===================================================== -->
+<section class="works" id="works">
+    <div class="works-header">
+        <div class="label">
+            SELECTED WORKS
+        </div>
+        <h2 class="section-title">
+            10 SHORT<br>
+            DRAMAS.
+        </h2>
+        <p class="works-intro">
+            A selection of short drama productions
+            directed and produced across Southeast Asia.
+        </p>
+    </div>
+    <!-- GROUP 01 -->
+    <div class="work-group">
+        <div class="work-number">
+            01 — 03 / 10
+        </div>
+        <div class="work-three">
+            <div class="work-card">
+                <img
+                    src="./IMG_20260809_102652.jpeg"
+                    alt="Short Drama 01">
+                <div class="work-info">
+                    <small>SHORT DRAMA · 01</small>
+                </div>
+            </div>
+            <div class="work-card">
+                <img
+                    src="./IMG_20260809_102729.jpeg"
+                    alt="Short Drama 02">
+                <div class="work-info">
+                    <small>SHORT DRAMA · 02</small>
+                </div>
+            </div>
+            <div class="work-card">
+                <img
+                    src="./IMG_20260809_102845.jpeg"
+                    alt="Short Drama 03">
+                <div class="work-info">
+                    <small>SHORT DRAMA · 03</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- GROUP 02 -->
+    <div class="work-group">
+        <div class="work-number">
+            04 — 06 / 10
+        </div>
+        <div class="work-three">
+            <div class="work-card">
+                <img
+                    src="./IMG_20260809_103003.jpeg"
+                    alt="Short Drama 04">
+                <div class="work-info">
+                    <small>SHORT DRAMA · 04</small>
+                </div>
+            </div>
+            <div class="work-card">
+                <img
+                    src="./IMG_20260809_103116.jpeg"
+                    alt="Short Drama 05">
+                <div class="work-info">
+                    <small>SHORT DRAMA · 05</small>
+                </div>
+            </div>
+            <div class="work-card">
+                <img
+                    src="./IMG_20260809_103150.jpeg"
+                    alt="Short Drama 06">
+                <div class="work-info">
+                    <small>SHORT DRAMA · 06</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- GROUP 03 -->
+    <div class="work-group">
+        <div class="work-number">
+            07 — 09 / 10
+        </div>
+        <div class="work-three">
+            <div class="work-card">
+                <img
+                    src="./IMG_20260809_103402.jpeg"
+                    alt="Short Drama 07">
+                <div class="work-info">
+                    <small>SHORT DRAMA · 07</small>
+                </div>
+            </div>
+            <div class="work-card">
+                <img
+                    src="./IMG_20260809_103514.jpeg"
+                    alt="Short Drama 08">
+                <div class="work-info">
+                    <small>SHORT DRAMA · 08</small>
+                </div>
+            </div>
+            <div class="work-card">
+                <img
+                    src="./IMG_20260809_103824.jpeg"
+                    alt="Short Drama 09">
+                <div class="work-info">
+                    <small>SHORT DRAMA · 09</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FEATURED 10 -->
+    <div class="work-featured reveal-scale">
+        <img
+            src="./IMG_20260809_103855.jpeg"
+            class="featured-image"
+            alt="Short Drama 10">
+        <div class="featured-title">
+            10 / 10
+        </div>
+    </div>
+</section>
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+<section class="services">
+    <div class="services-inner">
+        <div class="label">
             WHAT WE DO
         </div>
         <h2 class="section-title">
-            PRODUCTION<br>
-            FROM IDEA TO SCREEN.
+            FROM IDEA<br>
+            TO SCREEN.
         </h2>
-        <div class="services">
-            <div class="service">
+        <div class="service-grid">
+            <div class="service reveal">
                 <div class="service-number">
                     01
                 </div>
@@ -415,7 +876,7 @@
                     budgeting and local coordination.
                 </p>
             </div>
-            <div class="service">
+            <div class="service reveal">
                 <div class="service-number">
                     02
                 </div>
@@ -428,7 +889,7 @@
                     professional on-set production.
                 </p>
             </div>
-            <div class="service">
+            <div class="service reveal">
                 <div class="service-number">
                     03
                 </div>
@@ -442,39 +903,46 @@
                 </p>
             </div>
         </div>
-    </section>
-    <!-- =========================
-         REGIONAL PRODUCTION
-    ========================= -->
-    <section class="regional">
-        <div class="regional-content">
-            <div class="section-label">
-                SOUTHEAST ASIA
-            </div>
-            <h2>
-                PRODUCING<br>
-                ACROSS BORDERS.
-            </h2>
-            <p>
-                Based in Malaysia, 1986 Film Production
-                provides local production support for
-                international projects entering Southeast Asia.
-                <br><br>
-                Our experience across Malaysia and Indonesia
-                allows productions to work with local crews,
-                locations and production networks while
-                maintaining international production standards.
-            </p>
-            <div class="regional-markets">
-                MALAYSIA · INDONESIA · SOUTHEAST ASIA
-            </div>
+    </div>
+</section>
+<!-- =====================================================
+     REGIONAL
+===================================================== -->
+<section
+    class="regional reveal"
+    id="regional">
+    <div class="regional-inner">
+        <div class="label">
+            SOUTHEAST ASIA
         </div>
-    </section>
-    <!-- =========================
-         CONTACT
-    ========================= -->
-    <section class="contact">
-        <div class="section-label">
+        <h2>
+            PRODUCING<br>
+            ACROSS<br>
+            BORDERS.
+        </h2>
+        <p>
+            Based in Malaysia, 1986 Film Production
+            provides local production support for
+            international projects entering Southeast Asia.
+            <br><br>
+            Our experience across Malaysia and Indonesia
+            allows productions to work with local crews,
+            locations and production networks while
+            maintaining professional production standards.
+        </p>
+        <div class="markets">
+            MALAYSIA · INDONESIA · SOUTHEAST ASIA
+        </div>
+    </div>
+</section>
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+<section
+    class="contact reveal"
+    id="contact">
+    <div class="contact-inner">
+        <div class="label">
             GET IN TOUCH
         </div>
         <h2>
@@ -486,21 +954,111 @@
         </p>
         <a
             href="mailto:hello@1986filmproduction.com"
-            class="button"
-        >
+            class="contact-button">
             CONTACT 1986
         </a>
-    </section>
-    <!-- =========================
-         FOOTER
-    ========================= -->
-    <footer>
-        <span>
-            © 2026 1986 Film Production
-        </span>
-        <span>
-            MALAYSIA · SOUTHEAST ASIA
-        </span>
-    </footer>
+    </div>
+</section>
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+<footer>
+    <span>
+        © 2026 1986 Film Production
+    </span>
+    <span>
+        MALAYSIA · SOUTHEAST ASIA
+    </span>
+</footer>
+<script>
+/* =====================================================
+   INTERSECTION OBSERVER
+===================================================== */
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    },
+    {
+        threshold: 0.15
+    }
+);
+document
+    .querySelectorAll(
+        ".reveal, .reveal-scale, .work-card, .service, .work-featured, .regional, .contact"
+    )
+    .forEach(el => {
+        observer.observe(el);
+    });
+/* =====================================================
+   HERO PARALLAX
+===================================================== */
+const heroImage =
+    document.getElementById("heroImage");
+const heroContent =
+    document.getElementById("heroContent");
+window.addEventListener(
+    "scroll",
+    () => {
+        const scroll =
+            window.scrollY;
+        if (scroll < window.innerHeight) {
+            const move =
+                scroll * 0.22;
+            const scale =
+                1.08 + scroll * 0.00008;
+            heroImage.style.transform =
+                `translateY(${move}px) scale(${scale})`;
+            heroContent.style.transform =
+                `translateY(${scroll * 0.18}px)`;
+            heroContent.style.opacity =
+                Math.max(
+                    0,
+                    1 - scroll / 500
+                );
+        }
+    },
+    { passive: true }
+);
+/* =====================================================
+   IMAGE SCROLL MOVEMENT
+===================================================== */
+const cards =
+    document.querySelectorAll(".work-card");
+window.addEventListener(
+    "scroll",
+    () => {
+        cards.forEach((card, index) => {
+            const rect =
+                card.getBoundingClientRect();
+            const center =
+                window.innerHeight / 2;
+            const distance =
+                rect.top + rect.height / 2 - center;
+            const movement =
+                distance * -0.035;
+            const img =
+                card.querySelector("img");
+            if (img) {
+                img.style.transform =
+                    `translateY(${movement}px) scale(1.03)`;
+            }
+        });
+    },
+    { passive: true }
+);
+/* =====================================================
+   MOBILE TOUCH FRIENDLY
+===================================================== */
+window.addEventListener(
+    "load",
+    () => {
+        document.body.classList.add("loaded");
+    }
+);
+</script>
 </body>
 </html>
