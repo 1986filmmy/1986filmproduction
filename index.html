@@ -860,7 +860,303 @@ body.language-changing {
     mix-blend-mode: difference;
 }
 
+/* =========================
+   PROJECT IN DEVELOPMENT
+========================= */
 
+.project {
+
+    background: #0d0d0d;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.project-inner {
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: auto;
+}
+
+.project-label {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom:
+        1px solid #292929;
+
+    padding-bottom: 25px;
+}
+
+.project-status {
+
+    color: #555;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+.project-main {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 9vw;
+
+    padding:
+        90px 0 100px;
+
+    align-items: start;
+}
+
+.project-heading h2 {
+
+    font-size:
+        clamp(55px, 8vw, 120px);
+
+    line-height: .88;
+
+    font-weight: 300;
+
+    letter-spacing: -5px;
+
+    transform:
+        translateY(60px);
+
+    opacity: 0;
+
+    transition:
+        transform 1.2s
+        cubic-bezier(.2,.7,.2,1),
+        opacity 1s ease;
+}
+
+.project.visible
+.project-heading h2 {
+
+    transform:
+        translateY(0);
+
+    opacity: 1;
+}
+
+.project-copy {
+
+    max-width: 620px;
+
+    transform:
+        translateY(60px);
+
+    opacity: 0;
+
+    transition:
+        transform 1s
+        cubic-bezier(.2,.7,.2,1) .15s,
+        opacity 1s ease .15s;
+}
+
+.project.visible
+.project-copy {
+
+    transform:
+        translateY(0);
+
+    opacity: 1;
+}
+
+.project-copy p {
+
+    color: #888;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+.project-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 40px;
+}
+
+.project-tags span {
+
+    border:
+        1px solid #333;
+
+    padding:
+        10px 14px;
+
+    color: #777;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    transition:
+        border-color .3s ease,
+        color .3s ease;
+}
+
+.project-tags span:hover {
+
+    border-color: #777;
+
+    color: #fff;
+}
+
+.project-meta {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 20px;
+
+    margin-top: 55px;
+
+    border-top:
+        1px solid #292929;
+
+    padding-top: 25px;
+}
+
+.project-meta div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.project-meta span {
+
+    color: #555;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+.project-meta strong {
+
+    color: #aaa;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+.project-bottom {
+
+    border-top:
+        1px solid #292929;
+
+    padding-top: 35px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 50px;
+}
+
+.project-invest-label {
+
+    color: #777;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.project-bottom p {
+
+    max-width: 650px;
+
+    color: #555;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+.project-button {
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    border-bottom:
+        1px solid #555;
+
+    padding-bottom: 10px;
+
+    color: #aaa;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    transition:
+        color .3s ease,
+        border-color .3s ease;
+}
+
+.project-button span {
+
+    font-size: 17px;
+
+    transition:
+        transform .3s ease;
+}
+
+.project-button:hover {
+
+    color: #fff;
+
+    border-color: #fff;
+}
+
+.project-button:hover span {
+
+    transform:
+        translateX(6px);
+}
 /* =========================
    CREDITS
 ========================= */
@@ -1368,6 +1664,91 @@ footer {
 ========================= */
 
 @media (max-width: 800px) {
+       .project {
+
+        min-height:
+            auto;
+
+    }
+
+    .project-label {
+
+        align-items:
+            flex-start;
+
+        gap: 20px;
+
+    }
+
+    .project-status {
+
+        text-align:
+            right;
+
+        line-height:
+            1.5;
+
+    }
+
+    .project-main {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 55px;
+
+        padding:
+            65px 0 70px;
+
+    }
+
+    .project-heading h2 {
+
+        font-size:
+            65px;
+
+        letter-spacing:
+            -3px;
+
+    }
+
+    .project-copy p {
+
+        font-size:
+            14px;
+
+        line-height:
+            1.8;
+
+    }
+
+    .project-meta {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 25px;
+
+    }
+
+    .project-bottom {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        gap: 35px;
+
+    }
+
+    .project-button {
+
+        margin-top:
+            5px;
+
+    }
 
     section {
         padding:
@@ -1677,6 +2058,12 @@ footer {
                 data-zh="作品">
                 WORK
             </a>
+           <a
+    href="#project"
+    data-en="PROJECT"
+    data-zh="项目">
+    PROJECT
+</a>
 
             <a
                 href="#about"
@@ -2298,7 +2685,246 @@ footer {
 
 </section>
 
+<!-- =========================
+     PROJECT IN DEVELOPMENT
+========================= -->
 
+<section
+    class="project"
+    id="project">
+
+    <div class="project-inner">
+
+        <div class="project-label">
+
+            <div
+                class="label"
+                data-en="PROJECT IN DEVELOPMENT"
+                data-zh="正在开发中的项目">
+
+                PROJECT IN DEVELOPMENT
+
+            </div>
+
+            <div
+                class="project-status"
+                data-en="CURRENTLY IN DEVELOPMENT"
+                data-zh="目前正在开发">
+
+                CURRENTLY IN DEVELOPMENT
+
+            </div>
+
+        </div>
+
+
+        <div class="project-main">
+
+            <div class="project-heading">
+
+                <h2
+                    data-en="A STORY<br>MADE FOR<br>MALAYSIA."
+                    data-zh="一个<br>属于马来西亚<br>的故事。">
+
+                    A STORY<br>
+                    MADE FOR<br>
+                    MALAYSIA.
+
+                </h2>
+
+            </div>
+
+
+            <div class="project-copy">
+
+                <p
+                    data-en="An original feature film currently in development, created for a broad Malaysian audience across generations and backgrounds.<br><br>Blending humour, family, friendship, growth and heartfelt moments, the project explores the relationships that shape us — the people we grow up with, the people we trust, and the bonds that bring us together."
+                    data-zh="一部正在开发中的原创长篇电影，面向不同年龄层及不同背景的马来西亚大众观众。<br><br>故事融合幽默、亲情、友情、成长与感动，探讨人与人之间的关系——陪伴我们成长的人、我们所信任的人，以及让彼此连接在一起的情感纽带。">
+
+                    An original feature film currently in
+                    development, created for a broad
+                    Malaysian audience across generations
+                    and backgrounds.
+
+                    <br><br>
+
+                    Blending humour, family, friendship,
+                    growth and heartfelt moments, the project
+                    explores the relationships that shape us —
+                    the people we grow up with, the people
+                    we trust, and the bonds that bring us together.
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span
+                        data-en="COMEDY"
+                        data-zh="幽默">
+
+                        COMEDY
+
+                    </span>
+
+                    <span
+                        data-en="FAMILY"
+                        data-zh="亲情">
+
+                        FAMILY
+
+                    </span>
+
+                    <span
+                        data-en="FRIENDSHIP"
+                        data-zh="友情">
+
+                        FRIENDSHIP
+
+                    </span>
+
+                    <span
+                        data-en="GROWTH"
+                        data-zh="成长">
+
+                        GROWTH
+
+                    </span>
+
+                    <span
+                        data-en="TRUST"
+                        data-zh="信任">
+
+                        TRUST
+
+                    </span>
+
+                    <span
+                        data-en="UNITY"
+                        data-zh="连结">
+
+                        UNITY
+
+                    </span>
+
+                </div>
+
+
+                <div class="project-meta">
+
+                    <div>
+
+                        <span
+                            data-en="FORMAT"
+                            data-zh="形式">
+
+                            FORMAT
+
+                        </span>
+
+                        <strong
+                            data-en="FEATURE FILM"
+                            data-zh="长篇电影">
+
+                            FEATURE FILM
+
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span
+                            data-en="AUDIENCE"
+                            data-zh="受众">
+
+                            AUDIENCE
+
+                        </span>
+
+                        <strong
+                            data-en="MASS MALAYSIAN AUDIENCE"
+                            data-zh="马来西亚大众市场">
+
+                            MASS MALAYSIAN AUDIENCE
+
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span
+                            data-en="MARKET"
+                            data-zh="市场">
+
+                            MARKET
+
+                        </span>
+
+                        <strong
+                            data-en="MALAYSIA"
+                            data-zh="马来西亚">
+
+                            MALAYSIA
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-bottom">
+
+            <div>
+
+                <div
+                    class="project-invest-label"
+                    data-en="INVESTMENT & CO-PRODUCTION OPPORTUNITIES"
+                    data-zh="投资及联合制作机会">
+
+                    INVESTMENT & CO-PRODUCTION OPPORTUNITIES
+
+                </div>
+
+                <p
+                    data-en="We are currently exploring selected investment and co-production partnerships for this project. Project details and investment materials are available upon request."
+                    data-zh="目前正在寻找合适的投资及联合制作伙伴。有兴趣进一步了解项目及投资机会，欢迎联系我们索取项目资料。">
+
+                    We are currently exploring selected
+                    investment and co-production partnerships
+                    for this project. Project details and
+                    investment materials are available upon request.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="#contact"
+                class="project-button"
+                data-en="PROJECT ENQUIRY"
+                data-zh="项目咨询">
+
+                PROJECT ENQUIRY
+
+                <span>→</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 <!-- =========================
      CREDITS
